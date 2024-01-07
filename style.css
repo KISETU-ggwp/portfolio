@@ -100,13 +100,13 @@ button {
   justify-content: space-between;
 }
 
-.activities, .create, .next_pages {
+.activities, .create, .next_pages, .hogehoge {
   flex: 0 0 48%;
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
-  .activities, .create, .next_pages {
+  .activities, .create, .next_pages, .hogehoge {
     flex: 0 0 100%;
   }
 }
