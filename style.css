@@ -18,7 +18,13 @@ body {
   background: #FFFFFF;
 }
 
-h1, h2, h3, h4, h5, h6, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
   font-weight: bold;
 }
 
@@ -100,16 +106,45 @@ button {
   justify-content: space-between;
 }
 
-.activities, .create, .next_pages, .hogehoge {
+/* 既存のスタイル */
+.activities,
+.create,
+.next_pages,
+.hogehoge {
   flex: 0 0 48%;
   margin-bottom: 20px;
+
+  /* 新しいアニメーションのスタイルを追加 */
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @media screen and (max-width: 768px) {
-  .activities, .create, .next_pages, .hogehoge {
+
+  .activities,
+  .create,
+  .next_pages,
+  .hogehoge {
     flex: 0 0 100%;
   }
 }
+
+/* アニメーションのキーフレーム定義 */
+@keyframes slideIn {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+  40%,
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .custom-link {
   text-decoration: none;
@@ -145,7 +180,8 @@ button {
   color: #666;
 }
 
-.wrapper .A, .wrapper .B {
+.wrapper .A,
+.wrapper .B {
   text-align: center;
   width: 50%;
 }
@@ -177,7 +213,8 @@ button {
   min-width: 256px;
 }
 
-.btn:hover, .btn:active {
+.btn:hover,
+.btn:active {
   background: #0030B2;
   border: 1px solid #0030B2;
 }
@@ -199,7 +236,8 @@ button {
   border-radius: 8px;
 }
 
-.btn.btn--secondary:hover, .btn.btn--secondary:active {
+.btn.btn--secondary:hover,
+.btn.btn--secondary:active {
   color: #0030B2;
   background: #E8F1FE;
   border: 1px solid #0030B2;
@@ -223,7 +261,8 @@ button {
   text-decoration-line: underline;
 }
 
-.btn.btn--tertiary:hover, .btn.btn--tertiary:active {
+.btn.btn--tertiary:hover,
+.btn.btn--tertiary:active {
   color: #0030B2;
   border: 1px solid transparent;
 }
@@ -237,7 +276,8 @@ button {
   color: #949497;
 }
 
-.inputtext, .select {
+.inputtext,
+.select {
   margin: 8px 0px;
   box-sizing: border-box;
   display: flex;
@@ -256,15 +296,19 @@ button {
   flex-grow: 0;
 }
 
-.input:focus, .select:focus {
+.input:focus,
+.select:focus {
   border: 1px solid #D18D0F;
 }
 
-.input_error, .select_error {
+.input_error,
+.select_error {
   border: 1px solid #EC0000;
 }
 
-.input_label, .input_label_required, .input_label_option {
+.input_label,
+.input_label_required,
+.input_label_option {
   font-weight: 600;
   font-size: 14px;
   line-height: 175%;
@@ -301,12 +345,14 @@ button {
   color: #626264;
 }
 
-input[type=radio], input[type=checkbox] {
+input[type=radio],
+input[type=checkbox] {
   opacity: 0;
   position: absolute;
 }
 
-.radio_btn_tile, .checkbox_label {
+.radio_btn_tile,
+.checkbox_label {
   cursor: pointer;
   box-sizing: border-box;
   margin: 8px 0px;
@@ -324,7 +370,9 @@ input[type=radio], input[type=checkbox] {
   flex-grow: 1;
 }
 
-.radio_btn, .checkbox_icon, .checkbox {
+.radio_btn,
+.checkbox_icon,
+.checkbox {
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -333,13 +381,18 @@ input[type=radio], input[type=checkbox] {
   box-shadow: 0 0 0 2px #1A1A1C;
 }
 
-.radio_btns input[type=radio]:checked + .radio_btn_tile, 
-.checkboxes input[type=checkbox]:checked + .checkbox_label .checkbox_icon .checkbox {
+.radio_btns input[type=radio]:checked+.radio_btn_tile,
+.checkboxes input[type=checkbox]:checked+.checkbox_label .checkbox_icon .checkbox {
   border: 1px solid #003EE5;
   background-color: #003EE5;
 }
 
-.description, .place_holder, .link, .visited, .alert, .disabled {
+.description,
+.place_holder,
+.link,
+.visited,
+.alert,
+.disabled {
   color: #626264;
 }
 
