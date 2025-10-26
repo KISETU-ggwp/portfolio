@@ -4,21 +4,29 @@
   font-display: swap;
 }
 
+/* レイアウト全体の安定化 */
+* {
+  box-sizing: border-box;
+}
+
+/* 変数化で高さ管理を統一 */
+:root {
+  --header-h: 80px; /* 実際のヘッダー高さ */
+  --footer-h: 60px; /* フッター高さ */
+}
+
+/* body */
 body {
   font-family: 'CustomFont', 'Helvetica', 'Arial', sans-serif;
   background-color: black;
   color: white;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   text-align: center;
   line-height: 1.6;
 }
 
-
+/* ローディング */
 #loader {
   font-size: 24px;
   letter-spacing: 2px;
@@ -37,31 +45,24 @@ body {
 }
 
 @keyframes blink {
-  0% {
-    opacity: 0.2;
-  }
-
-  20% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.2;
-  }
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
 }
 
-
-/* header 処理 */
-
+/* ===== header ===== */
 header {
   background-color: #000;
   color: #fff;
-  padding: 1rem 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #333;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav ul {
@@ -92,8 +93,10 @@ nav ul li a.active {
   text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
 }
 
-/* スマートフォン向けのスタイル */
+/* スマホ用ヘッダー */
 @media screen and (max-width: 768px) {
+  :root { --header-h: 120px; }
+
   header {
     padding: 0.5rem 0;
   }
@@ -126,9 +129,7 @@ nav ul li a.active {
     padding: 10px 0;
   }
 
-  nav.active {
-    display: block;
-  }
+  nav.active { display: block; }
 
   nav ul {
     flex-direction: column;
@@ -139,7 +140,6 @@ nav ul li a.active {
     margin: 10px 0;
   }
 
-  /* ハンバーガーメニューのアニメーション */
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -153,75 +153,35 @@ nav ul li a.active {
   }
 }
 
+/* ===== main領域 ===== */
+html {
+  scroll-padding-top: var(--header-h);
+}
 
-
-
-/* mainフレーム処理 */
-
-main {
-  padding-top: 80px;
-  /* ヘッダーの高さ + 追加の余白。必要に応じて調整 */
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+main,
+#main-works,
+#main-int {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 60px);
-  /* フッターの高さを考慮。必要に応じて調整 */
-}
-
-/* レスポンシブデザインのための調整 */
-@media (max-width: 768px) {
-  main {
-    padding-top: 160px;
-    /* 小さい画面では少し狭くする */
-  }
-}
-
-
-main-works {
-  padding-top: 600px;
-  /* ヘッダーの高さ + 追加の余白。必要に応じて調整 */
-  padding-bottom: 20px;
+  padding-top: calc(var(--header-h) + 20px);
+  padding-bottom: calc(var(--footer-h) + 20px);
   padding-left: 20px;
   padding-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: calc(100vh - 60px);
-  /* フッターの高さを考慮。必要に応じて調整 */
+  min-height: calc(100vh - var(--footer-h));
 }
 
-/* レスポンシブデザインのための調整 */
-@media (max-width: 768px) {
-  main-works {
-    padding-top: 700px;
-    /* 小さい画面では少し狭くする */
-  }
-}
-
+/* 万一HTMLでカスタムタグを使っている場合も有効化 */
+main-works,
 main-int {
-  padding-top: 200px;
-  /* ヘッダーの高さ + 追加の余白。必要に応じて調整 */
-  padding-bottom: 20px;
+  display: block;
+  padding-top: calc(var(--header-h) + 20px);
+  padding-bottom: calc(var(--footer-h) + 20px);
   padding-left: 20px;
   padding-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: calc(100vh - 60px);
-  /* フッターの高さを考慮。必要に応じて調整 */
 }
 
-/* レスポンシブデザインのための調整 */
-@media (max-width: 768px) {
-  main-int {
-    padding-top: 280px;
-    /* 小さい画面では少し狭くする */
-  }
-}
-
+/* ===== カードなど ===== */
 .card {
   background-color: #111;
   border-radius: 8px;
@@ -247,21 +207,18 @@ main-int {
   object-fit: cover;
 }
 
-h1 {
-  color: #fff;
-  margin-bottom: 1rem;
+/* ===== テキスト ===== */
+h1 { color: #fff; margin-bottom: 1rem; }
+
+.summary { text-align: left; margin-bottom: 0; }
+.talk { text-align: center; margin-bottom: 0; }
+
+.sub {
+  font-size: 0.9em;
+  color: #aaa;
 }
 
-.summary {
-  text-align: left;
-  margin-bottom: 0;
-}
-
-.talk {
-  text-align: center;
-  margin-bottom: 0;
-}
-
+/* ===== フッター ===== */
 footer {
   background-color: #000;
   color: #fff;
@@ -271,8 +228,10 @@ footer {
   bottom: 0;
   width: 100%;
   border-top: 1px solid #333;
+  height: var(--footer-h);
 }
 
+/* ===== SNSリンク ===== */
 .social-links {
   margin-top: 2rem;
   display: flex;
@@ -285,13 +244,13 @@ footer {
   height: 30px;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: invert(1) brightness(200%);
-  /* SVGを白色に変更 */
 }
 
 .social-icon:hover {
   transform: scale(1.2);
 }
 
+/* ===== リンクセクション ===== */
 .link-icon {
   width: 50px;
   margin-right: 10px;
@@ -313,11 +272,12 @@ footer {
   margin: auto;
   color: #ffffff;
   border: 2px solid #ffffff;
-  /* 白い線でボックスを囲む */
   padding: 20px;
-  /* 内側の余白を追加 */
   border-radius: 8px;
-  /* 角を少し丸くする（オプション） */
   box-shadow: 0 0 10px rgb(255, 221, 0, 0.1);
-  /* 微かな発光効果（オプション） */
+}
+
+/* ===== アンカーリンク対策 ===== */
+:target {
+  scroll-margin-top: var(--header-h);
 }
