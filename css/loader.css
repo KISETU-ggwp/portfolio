@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* レイアウト全体の安定化 */
 * {
   box-sizing: border-box;
