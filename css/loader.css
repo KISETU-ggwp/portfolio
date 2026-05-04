@@ -357,7 +357,7 @@ h2 {
   margin: 2rem auto 1rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--border);
-  text-align: left;
+  text-align: right;
   font-size: clamp(1.1rem, 2.4vw, 1.35rem);
   line-height: 1.4;
 }
@@ -369,28 +369,28 @@ h2 {
 }
 
 .summary {
-  text-align: left;
+  text-align: right;
   margin: 0 auto 1.5rem;
   max-width: var(--content-w);
   line-height: 1.9;
 }
 
 .talk {
-  text-align: left;
+  text-align: right;
   margin: 0 auto 1rem;
   max-width: var(--content-w);
   line-height: 1.8;
 }
 
 .profile-meta {
-  text-align: center;
+  text-align: right;
   margin: 0 auto 0.35rem;
   max-width: var(--content-w);
 }
 
 .meta-list,
 .achievement-list {
-  text-align: left;
+  text-align: right;
   margin: 0 auto 1.5rem;
   padding-left: 0;
   max-width: var(--content-w);
@@ -435,7 +435,7 @@ h2 {
 .section-note {
   margin: 0 auto 1rem;
   max-width: var(--content-w);
-  text-align: left;
+  text-align: right;
 }
 
 /* ===== フッター ===== */
