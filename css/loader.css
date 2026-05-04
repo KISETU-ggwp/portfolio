@@ -219,18 +219,11 @@ h1 { color: #fff; margin-bottom: 1rem; }
   margin: 0 auto 1.5rem;
   padding-left: 0;
   max-width: 600px;
-  list-style: none;
 }
 
-.meta-list li,
-.achievement-list li {
+.meta-item,
+.achievement-item {
   margin-bottom: 0.75rem;
-  list-style: none;
-}
-
-.meta-list li::marker,
-.achievement-list li::marker {
-  content: "";
 }
 
 .keyword-list {
