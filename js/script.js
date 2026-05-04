@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
+  const profileVideo = document.querySelector('.profile-video');
 
   if (menuToggle && nav) {
     const setMenuState = function(isOpen) {
@@ -25,5 +26,25 @@ document.addEventListener('DOMContentLoaded', function() {
         setMenuState(false);
       }
     });
+  }
+
+  if (profileVideo) {
+    const startPlayback = function() {
+      profileVideo.classList.remove('is-loading');
+      const playPromise = profileVideo.play();
+
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(function() {
+          profileVideo.classList.remove('is-loading');
+        });
+      }
+    };
+
+    if (profileVideo.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
+      startPlayback();
+    } else {
+      profileVideo.addEventListener('canplaythrough', startPlayback, { once: true });
+      profileVideo.load();
+    }
   }
 });
