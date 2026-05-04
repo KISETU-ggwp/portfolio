@@ -9,44 +9,59 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="primary-nav" aria-expanded="false">
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-label">Menu</span>
+    </button>
+    <nav id="primary-nav">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="introduction.html">Introduction</a></li>
         <li><a href="works.html">Works</a></li>
-        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="skills.html" class="active" aria-current="page">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <div class="card">
+      <p class="page-note">このページの外部リンクは新しいタブで開きます。</p>
 
-      <h2>[Language]</h2>
+      <h2>使用言語 / Languages</h2>
       <div class="social-links">
 
-        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="icon-link">
           <img src="../image/python.svg" alt="Python3" class="social-icon">
+          <span class="icon-link-text">
+            <span class="icon-link-title">Python</span>
+            <span class="icon-link-note">公式サイト ↗</span>
+          </span>
         </a>
 
-        <a href="https://learn.microsoft.com/ja-jp/dotnet/csharp/" target="_blank" rel="noopener noreferrer">
+        <a href="https://learn.microsoft.com/ja-jp/dotnet/csharp/" target="_blank" rel="noopener noreferrer" class="icon-link">
           <img src="../image/c_sharp.svg" alt="c#" class="social-icon">
+          <span class="icon-link-text">
+            <span class="icon-link-title">C#</span>
+            <span class="icon-link-note">公式サイト ↗</span>
+          </span>
         </a>
 
-        <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+        <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="icon-link">
           <img src="../image/javascript.svg" alt="JavaScript" class="social-icon">
+          <span class="icon-link-text">
+            <span class="icon-link-title">JavaScript</span>
+            <span class="icon-link-note">公式サイト ↗</span>
+          </span>
         </a>
       </div>
 
-      <h2>[Development]</h2>
+      <h2>開発手法 / Development</h2>
       <p class="talk">Agile</p>
-      <h2>[Award]</h2>
+      <h2>受賞 / Awards</h2>
       <div class="achievement-list">
         <p class="achievement-item">2025年9月: FIT2025 奨励賞
           <br><span class="sub">YouTube-SL-25における日本手話動画の再分類と段階的アノテーションの必要性</span>
@@ -57,17 +72,17 @@
         <p class="achievement-item">筑波技術大学 産業技術学部 学部長賞</p>
         <p class="achievement-item">優秀情報保障工学特別研究賞</p>
       </div>
-      <h2>[License]</h2>
+      <h2>資格 / Licenses</h2>
       <div class="achievement-list">
         <p class="achievement-item">JDLA Deep Learning for GENERAL 2024 #1</p>
         <p class="achievement-item">J.C.Q.A.認定コーヒーイントラクター3級</p>
       </div>
-      <h2>[Completion]</h2>
+      <h2>修了 / Completion</h2>
       <p class="talk">東京大学グローバル消費インテリジェンス Winter 2023
         <br>東京大学 松尾・岩澤研 Deep Learning 基礎講座 2024
         <br>
       </p>
-      <h2>[External Links]</h2>
+      <h2>外部リンク / External Links</h2>
       <div class="link-container">
         <a href="https://researchmap.jp/kofuna" target="_blank" rel="noopener noreferrer" class="custom-link">
           <div class="link-content">
@@ -90,7 +105,7 @@
         </a>
       </div>
 
-      <h2>[Contract-based Project]</h2>
+      <h2>業務委託 / Contract-based Projects</h2>
       <div class="link-container">
         <a href="https://www.tanseisha.co.jp" target="_blank"
           class="custom-link">
@@ -106,7 +121,7 @@
       </div>
 
 
-      <h2>[Intern]</h2>
+      <h2>インターン / Internships</h2>
             
       <div class="link-container">
         <a href="https://recruit.kddi-agile.com" target="_blank"
@@ -128,7 +143,7 @@
           <div class="link-content">
             <div class="link-info">
               <h4>全日本空輸株式会社[ANA]</h4> <!-- リンクのタイトル -->
-              <p>インターン：グローバルスタッフ職 <IT・データ>
+              <p>インターン：グローバルスタッフ職 &lt;IT・データ&gt;
                 <br> 期間：2024年12月(1週間)
               </p> <!-- リンクの説明 -->
             </div>

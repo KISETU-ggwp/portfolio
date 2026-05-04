@@ -9,15 +9,17 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="primary-nav" aria-expanded="false">
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-label">Menu</span>
+    </button>
+    <nav id="primary-nav">
       <ul>
-        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="home.html" class="active" aria-current="page">Home</a></li>
         <li><a href="introduction.html">Introduction</a></li>
         <li><a href="works.html">Works</a></li>
         <li><a href="skills.html">Skills</a></li>
@@ -26,16 +28,16 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="card">
       <h1>船山 滉介</h1>
       <div class="photo-container">
-        <img src="../image/my_photo.PNG" alt="My Photo" class="profile-photo">
+        <img src="../image/my_photo.PNG" alt="船山滉介のプロフィール写真" class="profile-photo">
       </div>
-      <p class="talk">Kosuke Funayama</p>
-      <p class="talk">筑波技術大学大学院 技術科学研究科 産業技術学専攻 修士課程</p>
-      <p class="talk">筑波技術大学 リサーチ・アシスタント</p>
-      <h1>Who am I</h1>
+      <p class="profile-meta">Kosuke Funayama</p>
+      <p class="profile-meta">筑波技術大学大学院 技術科学研究科 産業技術学専攻 修士課程</p>
+      <p class="profile-meta">筑波技術大学 リサーチ・アシスタント</p>
+      <h2>プロフィール / Profile</h2>
       <p class="summary">
       筑波技術大学大学院 技術科学研究科 産業技術学専攻 修士課程に在籍し、
       知能情報学およびヒューマンインタフェース、インタラクションを基盤として、
@@ -47,19 +49,20 @@
 
       現在は、研究成果を社会実装へと展開し、人に寄り添う情報提示システムの実証と運用を進めています。
       </p>
-      <h2>[Research Areas]</h2>
+      <h2>研究分野 / Research Areas</h2>
       <div class="meta-list">
         <p class="meta-item">知能情報学</p>
         <p class="meta-item">ヒューマンインタフェース・インタラクション</p>
       </div>
-      <h2>[Research Keywords]</h2>
+      <h2>研究キーワード / Research Keywords</h2>
       <div class="keyword-list">
         <span class="keyword-tag">アクセシビリティ</span>
         <span class="keyword-tag">人工知能</span>
         <span class="keyword-tag">拡張現実</span>
         <span class="keyword-tag">支援技術</span>
       </div>
-      <h2>[External Profiles]</h2>
+      <h2>外部プロフィール / External Profiles</h2>
+      <p class="section-note">以下の外部リンクは新しいタブで開きます。</p>
       <div class="link-container">
         <a href="https://researchmap.jp/kofuna" target="_blank" rel="noopener noreferrer" class="custom-link">
           <div class="link-content">
@@ -92,15 +95,29 @@
           </div>
         </a>
       </div>
+      <h2>ソーシャルリンク / Social Links</h2>
+      <p class="section-note">以下の外部リンクは新しいタブで開きます。</p>
       <div class="social-links">
-        <a href="https://note.com/kisetu184/" target="_blank" rel="noopener noreferrer">
+        <a href="https://note.com/kisetu184/" target="_blank" rel="noopener noreferrer" class="icon-link">
           <img src="../image/note.svg" alt="Note" class="social-icon">
+          <span class="icon-link-text">
+            <span class="icon-link-title">note</span>
+            <span class="icon-link-note">新しいタブで開く ↗</span>
+          </span>
         </a>
-        <a href="https://github.com/KISETU-ggwp" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/KISETU-ggwp" target="_blank" rel="noopener noreferrer" class="icon-link">
           <img src="../image/github.svg" alt="GitHub" class="social-icon">
+          <span class="icon-link-text">
+            <span class="icon-link-title">GitHub</span>
+            <span class="icon-link-note">新しいタブで開く ↗</span>
+          </span>
         </a>
-        <a href="https://twitter.com/funasax" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/funasax" target="_blank" rel="noopener noreferrer" class="icon-link">
           <img src="../image/twitterx.svg" alt="Twitter" class="social-icon">
+          <span class="icon-link-text">
+            <span class="icon-link-title">X</span>
+            <span class="icon-link-note">新しいタブで開く ↗</span>
+          </span>
         </a>
       </div>
     </div>

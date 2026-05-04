@@ -10,26 +10,29 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="primary-nav" aria-expanded="false">
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-label">Menu</span>
+    </button>
+    <nav id="primary-nav">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="introduction.html">Introduction</a></li>
-        <li><a href="works.html" class="active">Works</a></li>
+        <li><a href="works.html" class="active" aria-current="page">Works</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="card">
-      <h2>[Research Publications & Presentations]</h2>
+      <p class="page-note">このページの研究業績リンクと制作物リンクは新しいタブで開きます。</p>
+      <h2>研究業績 / Research Publications and Presentations</h2>
       <div class="link-container">
         <a href="https://jglobal.jst.go.jp/public/202501021041919892" target="_blank" rel="noopener noreferrer" class="custom-link">
           <div class="link-content">
@@ -74,7 +77,7 @@
         </a>
       </div>
 
-      <h2>[Web Application]</h2>
+      <h2>Webアプリケーション / Web Applications</h2>
       <div class="link-container">
         <a href="https://github.com/KISETU-ggwp/Sekoe" target="_blank" class="custom-link">
           <div class="link-content">
@@ -114,7 +117,7 @@
         </a>
       </div>
 
-      <h2>[Xreal(AR Glass)Application]</h2>
+      <h2>Xreal(ARグラス)アプリ / Xreal AR Glass Applications</h2>
       <div class="link-container">
         <a href="https://github.com/KISETU-ggwp/AR_info_glass" target="_blank" class="custom-link">
           <div class="link-content">
@@ -128,7 +131,7 @@
         </a>
       </div>
 
-      <h2>[AI]</h2>
+      <h2>AI / Artificial Intelligence</h2>
       <div class="link-container">
         <a href="https://github.com/KISETU-ggwp/mediapipe_face_hand_tracker" target="_blank" class="custom-link">
           <div class="link-content">

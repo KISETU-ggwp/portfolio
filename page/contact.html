@@ -9,29 +9,31 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="primary-nav" aria-expanded="false">
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-label">Menu</span>
+    </button>
+    <nav id="primary-nav">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="introduction.html">Introduction</a></li>
         <li><a href="works.html">Works</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <div class="card">
-      <h2>e-mail</h2>
+      <h2>メール / Email</h2>
       <p class="talk">kosuke.funayama[at]gmail.com</p>
       <p class="talk">a253104[at]a.tsukuba-tech.ac.jp</p>
       <p class="talk">[at]を"@"に置き換えていただければ幸いです。</p>
-      <h2>phone</h2>
+      <h2>電話 / Phone</h2>
       <p class="talk">耳が聞こえにくいため，電話対応不可．
         <br>SMSにつきましてはお受け致します.</p>
 

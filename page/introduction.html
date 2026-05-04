@@ -9,62 +9,65 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="primary-nav" aria-expanded="false">
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-label">Menu</span>
+    </button>
+    <nav id="primary-nav">
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="introduction.html" class="active">Introduction</a></li>
+        <li><a href="introduction.html" class="active" aria-current="page">Introduction</a></li>
         <li><a href="works.html">Works</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <div class="card">
-      <h2>[Department]</h2>
+      <h2>所属 / Department</h2>
       <p class="talk">筑波技術大学院 技術科学研究科
         <br>産業技術学専攻 修士課程
       </p>
-      <h2>[Degree]</h2>
+      <h2>学位 / Degree</h2>
       <div class="meta-list">
         <p class="meta-item">学士（工学）, 筑波技術大学</p>
       </div>
-      <h2>[Education]</h2>
+      <h2>学歴 / Education</h2>
       <div class="meta-list">
         <p class="meta-item">2025年4月 - 現在: 筑波技術大学大学院 技術科学研究科 産業技術学専攻 修士課程</p>
         <p class="meta-item">2021年4月 - 2025年3月: 筑波技術大学 産業技術学部 産業情報学科</p>
         <p class="meta-item">北海道高等ろう学校 普通科 卒業</p>
       </div>
-      <h2>[Current Role]</h2>
+      <h2>現在の役割 / Current Role</h2>
       <div class="meta-list">
         <p class="meta-item">2026年1月 - 現在: 筑波技術大学 リサーチ・アシスタント</p>
       </div>
-      <h2>[Research Fields]</h2>
+      <h2>研究分野 / Research Fields</h2>
       <div class="meta-list">
         <p class="meta-item">知能情報学</p>
         <p class="meta-item">ヒューマンインタフェース・インタラクション</p>
       </div>
-      <h2>[Research]</h2>
+      <h2>研究概要 / Research</h2>
       <p class="summary">
         アクセシビリティ、人工知能、拡張現実、支援技術を主なキーワードとして、
         ろう・難聴者の情報保障とコミュニケーション支援に関する研究開発を進めています。
         字幕提示の空間パーソナライズ、日本手話動画データセットの再分類と段階的アノテーション、
         機械学習を用いた指文字認識など、研究と実装の両面から取り組んでいます。
       </p>
-      <h2>[Selected Research Topics]</h2>
+      <h2>主要研究テーマ / Selected Research Topics</h2>
       <div class="achievement-list">
         <p class="achievement-item">ARグラスを用いたろう・難聴者向け字幕提示方法の探索的研究: 字幕位置の影響に着目して <span class="sub">（IPSJ SIG AAC 第25回 学生奨励賞）</span></p>
         <p class="achievement-item">YouTube-SL-25における日本手話動画の再分類と段階的アノテーションの必要性 <span class="sub">（FIT2025 奨励賞）</span></p>
         <p class="achievement-item">An Exploratory Study on Spatial Personalization in AR Caption Design for Deaf and Hard of Hearing <span class="sub">（IEEE SMC 2025 査読付国際会議）</span></p>
       </div>
 
-      <h2>[Speaking]</h2>
+      <h2>登壇 / Speaking</h2>
+      <p class="section-note">以下の外部リンクは新しいタブで開きます。</p>
       <div class="link-container">
         <a href="https://confengine.com/conferences/agile-pbl-2024/proposal/19572/enpit-fish" target="_blank"
           class="custom-link">
