@@ -213,6 +213,35 @@ h1 { color: #fff; margin-bottom: 1rem; }
 .summary { text-align: left; margin-bottom: 0; }
 .talk { text-align: center; margin-bottom: 0; }
 
+.meta-list,
+.achievement-list {
+  text-align: left;
+  margin: 0 auto 1.5rem;
+  padding-left: 1.2rem;
+  max-width: 600px;
+}
+
+.meta-list li,
+.achievement-list li {
+  margin-bottom: 0.75rem;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+
+.keyword-tag {
+  border: 1px solid #ffd700;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  color: #ffd700;
+  font-size: 0.95rem;
+}
+
 .sub {
   font-size: 0.9em;
   color: #aaa;
@@ -275,6 +304,18 @@ footer {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgb(255, 221, 0, 0.1);
+}
+
+.custom-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.link-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* ===== アンカーリンク対策 ===== */
